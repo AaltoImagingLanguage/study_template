@@ -27,10 +27,9 @@ elif host == 'nbe-024.org.aalto.fi' and user == 'vanvlm1':
     raw_data_dir = './data'
     n_jobs = 8  # My workstation has 8 cores
 else:
-    raise RuntimeError('Please edit config.py and set the raw_data_dir '
-                       'variable to point to the location where the data '
-                       'should be stored and the n_jobs variable to the '
-                       'number of CPU cores the analysis is allowed to use.')
+    # Defaults
+    raw_data_dir = './data'
+    n_jobs = 1
 
 # For BLAS to use the right amount of cores
 os.environ['OMP_NUM_THREADS'] = str(n_jobs)
