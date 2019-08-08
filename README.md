@@ -11,18 +11,24 @@ This template contains a mock analysis pipeline with:
  * 2 figures
 
 ## Running the mock analysis pipeline
-* Clone this repository
-* Move into the folder
+* Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/master.zip)
+* Extract the downloaded zip file
+* Open a terminal and move into the folder containing the study template
 * Make sure all required python packages are installed by running: `pip install -r requirements.txt`
-* Run `doit`
+* Run the analysis by either:
+  * run `doit` to use a build system to run all the analysis steps
+  * alternatively, run `python master.py` to use a simple master script to run all the analysis steps
 
-## Getting started with a new data analysis pipeline
-* Modify `requirements.txt`
-  * Add all python packages your analysis pipeline needs
+## Getting started with a new data analysis pipeline based on the study template
+* Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/master.zip)
+* Extract the downloaded zip file
 * Modify `config.py`
   * Add your system to the list, indication where your data is, how many cores you have on your machine, etc.
   * Add all parameters relevant to your analysis to the script
   * Add all filenames relevant to your analysis to the script
-* Modify `dodo.py`
-  * Add tasks for all analysis steps
 * Add new scripts for each analysis step and each figure
+* Modify the master script to execute the scripts you have added by either:
+  * Add new tasks to the `dodo.py` script to use the `doit` build system to run all the analysis steps
+  * alternatively, add new lines to execute the scripts you have added to the `master.py` file to use a simple master script to run all the analysis steps
+* Modify `requirements.txt`
+  * Add all python packages your analysis pipeline needs
