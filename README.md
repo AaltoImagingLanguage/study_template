@@ -14,7 +14,6 @@ This template contains a mock analysis pipeline with:
 * Clone this repository
 * Move into the folder
 * Make sure all required python packages are installed by running: `pip install -r requirements.txt`
-* Run `python check_system.py`
 * Run `doit`
 
 ## Getting started with a new data analysis pipeline
