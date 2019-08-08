@@ -18,6 +18,8 @@ This template contains a mock analysis pipeline with:
 * Run the analysis by either:
   * run `doit` to use a build system to run all the analysis steps
   * alternatively, run `python master.py` to use a simple master script to run all the analysis steps
+  
+After the analysis has been completed, new HTML reports should be in the `reports/` folder and new figures should be in the `figures/` folder.
 
 ## Getting started with a new data analysis pipeline based on the study template
 * Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/master.zip)
