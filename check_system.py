@@ -4,41 +4,19 @@ ready to run the analysis pipeline.
 """
 
 import os
-import warnings
+import pkg_resources
 
-# Scientific stack message
-stack_msg = ('Make sure the basic Python scientific stack (Numpy/Scipy/Matplotlib) is installed.'
-             'We recommend using the Anaconda Python distribution for this: http://docs.continuum.io/anaconda/install')
+# Check to see if the python dependencies are fullfilled.
+dependencies = []
+with open('./requirements.txt') as f:
+    for line in f:
+        line = line.strip()
+        if len(line) == 0 or line.startswith('#'):
+            continue
+        dependencies.append(line)
 
-# Check if dependencies are present
-try:
-    import numpy
-except:
-    raise ValueError('numpy is not installed. ' + stack_msg)
-
-try:
-    import scipy
-except:
-    raise ValueError('scipy is not installed. ' + stack_msg)
-
-try:
-    from matplotlib import pyplot
-except:
-    raise ValueError('matplotlib is not installed. ' + stack_msg)
-
-try:
-    import doit
-except:
-    raise ValueError('doit is not installed. Please run `pip install doit` to install it.')
-
-try:
-    import mne
-    mne.sys_info()  # Prints some information about the system
-except:
-    raise ValueError('mne is not installed. Please run `pip install mne` to install it.')
-
-
-# TODO: Add tests for any further packages your analys pipeline needs
+# This raises errors of dependencies are not met
+pkg_resources.working_set.require(dependencies)
 
 # Check that the data is present on the system
 from config import fname
@@ -49,6 +27,10 @@ if not os.path.exists(fname.raw_data_dir):
 os.makedirs(fname.processed_data_dir, exist_ok=True)
 os.makedirs(fname.figures_dir, exist_ok=True)
 os.makedirs(fname.reports_dir, exist_ok=True)
+
+# Prints some information about the system
+import mne
+mne.sys_info()
 
 with open(fname.system_check, 'w') as f:
     f.write('System check OK.')
