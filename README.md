@@ -10,7 +10,7 @@ This template contains a mock analysis pipeline with:
  * 2 analysis steps
  * 2 figures
 
-## Running the mock analysis pipeline
+## Running the analysis pipeline
 * Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/master.zip)
 * Extract the downloaded zip file
 * Open a terminal and move into the folder containing the study template
