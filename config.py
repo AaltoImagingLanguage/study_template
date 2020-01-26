@@ -7,6 +7,7 @@ Configuration parameters for the study.
 """
 
 import os
+import getpass
 from socket import getfqdn
 from fnames import FileNames
 
@@ -14,7 +15,7 @@ from fnames import FileNames
 # Determine which user is running the scripts on which machine and set the path
 # where the data is stored and how many CPU cores to use.
 
-user = os.getlogin()  # Username of the user running the scripts
+user = getpass.getuser()  # Username of the user running the scripts
 host = getfqdn()  # Hostname of the machine running the scripts
 
 # You want to add your machine to this list
