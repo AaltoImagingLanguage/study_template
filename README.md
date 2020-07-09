@@ -3,7 +3,7 @@
 When starting a new data analysis project, you can use this repository as a template to get you started.
 It is a barebones implementation that incorporates all the tips featured in:
 
-[Marijn van Vliet (2019): Guidelines for data analysis scripts](https://arxiv.org/abs/1904.06163)
+[Marijn van Vliet (2020): Seven quick tips for analysis scripts in neuroimaging](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007358)
 
 This template contains a mock analysis pipeline with some mock data:
  * 2 subjects
