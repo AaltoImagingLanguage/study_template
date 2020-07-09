@@ -30,7 +30,7 @@ After the analysis has been completed:
 1. Extract the downloaded zip file
 
 1. Modify `config.py`
-   1. Add your system to the list at the top, indication where your data is, how many cores you have on your machine, etc.
+   1. Add your system to the list at the top, indicate where your data is, how many cores you have on your machine, etc.
    1. Add all parameters relevant to your analysis to the script
    1. Add all filenames relevant to your analysis to the script
 
