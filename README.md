@@ -7,8 +7,8 @@ It is a barebones implementation that incorporates all the tips featured in:
 
 This template contains a mock analysis pipeline with some mock data:
  * 2 subjects
- * 2 analysis steps
- * 2 figures
+ * 2 analysis steps (`00_example_step.py` and `01_grand_average.py`)
+ * 2 figures (`figure_example1.py` and `figure_grand_average.py`)
 
 ## Running the analysis pipeline
 1. Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/master.zip)
@@ -24,6 +24,24 @@ After the analysis has been completed:
  * the processed data should be in the `processed/` folder
  * the HTML reports should be in the `reports/` folder
  * the generated figures should be in the `figures/` folder.
+ 
+## Explanation of all the files in this repository
+
+| Filename                | Explanation   |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| .gitignore              | Configuration file for Git so it ignores non-code files   
+| 00_example_step.py      | The first step of the analysis                                                                                                                                                                       |
+| 01_grand_average.py     | The second step of the analysis                                                                                                                                                                      |
+| LICENSE                 | BSD 3-clause license. This is the license under which this study template is published.                                                                                                              |
+| README.md               | The README document you are currently reading.                                                                                                                                                       |
+| check_system.py         | Script that checks whether all required Python packages are installed, whether the data can be found, etc. This is run before the actual analysis starts to catch installation errors.               |
+| config.py               | The configuration file that is used by all analysis scripts. It defines all variables shared across scripts. This includes things like filter settings, but also all filenames used in the analysis. |
+| dodo.py                 | A version of the master script that is meant to be consumed by the build system "pydoit". Use either this script as master script or use `master.py`.                                                |
+| figure_example1.py      | Script that produces the first figure in this analysis.                                                                                                                                              |
+| figure_grand_average.py | Script that produces the second figure in this analysis.                                                                                                                                             |
+| fnames.py               | Helper class to manage filenames. Used in `config.py` to define all filenames. Used by the analysis scripts for convenient access to the filenames.                                                  |
+| master.py               | A plain python version of the master script. Use either this script or `dodo.py` to run the entire analysis.                                                                                         |
+| requirements.txt        | A list of python packages required to run the analysis. You can install these with `pip install -r requirements.txt`                                                                                 |
 
 ## Getting started with a new data analysis pipeline based on the study template
 1. Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/master.zip)
