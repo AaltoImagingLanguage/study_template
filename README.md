@@ -11,14 +11,14 @@ This template contains a mock analysis pipeline with some mock data:
  * 2 figures (`figure_example1.py` and `figure_grand_average.py`)
 
 ## Running the analysis pipeline
-1. Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/master.zip)
+1. Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/main.zip)
 1. Extract the downloaded zip file
 1. Open a terminal and move into the folder containing the study template
 1. Make sure all required python packages are installed by running: `pip install -r requirements.txt`
 
 1. Run the analysis by either:
-   * run `doit` to use a build system to run all the analysis steps
-   * alternatively, run `python master.py` to use a simple master script to run all the analysis steps
+   * run `doit` to use a [build system](https://pydoit.org) to run all the analysis steps
+   * alternatively, run `python main.py` to use a simple main script to run all the analysis steps
   
 After the analysis has been completed:
  * the processed data should be in the `processed/` folder
@@ -36,15 +36,15 @@ After the analysis has been completed:
 | README.md               | The README document you are currently reading.                                                                                                                                                       |
 | check_system.py         | Script that checks whether all required Python packages are installed, whether the data can be found, etc. This is run before the actual analysis starts to catch installation errors.               |
 | config.py               | The configuration file that is used by all analysis scripts. It defines all variables shared across scripts. This includes things like filter settings, but also all filenames used in the analysis. |
-| dodo.py                 | A version of the master script that is meant to be consumed by the build system "pydoit". Use either this script as master script or use `master.py`.                                                |
+| dodo.py                 | A version of the main script that is meant to be consumed by the build system "pydoit". Use either this script as main script or use `main.py`.                                                |
 | figure_example1.py      | Script that produces the first figure in this analysis.                                                                                                                                              |
 | figure_grand_average.py | Script that produces the second figure in this analysis.                                                                                                                                             |
 | fnames.py               | Helper class to manage filenames. Used in `config.py` to define all filenames. Used by the analysis scripts for convenient access to the filenames.                                                  |
-| master.py               | A plain python version of the master script. Use either this script or `dodo.py` to run the entire analysis.                                                                                         |
+| main.py                 | A plain python version of the main script. Use either this script or `dodo.py` to run the entire analysis.                                                                                         |
 | requirements.txt        | A list of python packages required to run the analysis. You can install these with `pip install -r requirements.txt`                                                                                 |
 
 ## Getting started with a new data analysis pipeline based on the study template
-1. Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/master.zip)
+1. Download the study template by clicking [here](https://github.com/AaltoImagingLanguage/study_template/archive/main.zip)
 1. Extract the downloaded zip file
 
 1. Modify `config.py`
@@ -54,9 +54,9 @@ After the analysis has been completed:
 
 1. Add new scripts for each analysis step and each figure
 
-1. Modify the master script to execute the scripts you have added by either:
-   * Add new tasks to the `dodo.py` script to use the `doit` build system to run all the analysis steps. Delete `master.py`.
-   * alternatively, add new lines to execute the scripts you have added to the `master.py` file to use a simple master script to run all the analysis steps. Delete `dodo.py`.
+1. Modify the main script to execute the scripts you have added by either:
+   * Add new tasks to the `dodo.py` script to use the [`doit`](https://pydoit.org) build system to run all the analysis steps. Delete `main.py`.
+   * alternatively, add new lines to execute the scripts you have added to the `main.py` file to use a simple main script to run all the analysis steps. Delete `dodo.py`.
 
 1. Modify `requirements.txt`
    1. Add all python packages your analysis pipeline needs

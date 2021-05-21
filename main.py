@@ -9,7 +9,7 @@ from config import subjects
 
 def call(script, *params):
     """Call a script and exit if the script failed."""
-    print('Running %s ' % (script + ' '.join(params)))
+    print('\n---- Running %s %s ----\n' % (script, ' '.join(params)))
     return_code = subprocess.call(['python', script] + list(params))
     if return_code != 0:
         # Something went wrong when executing the script. Drop everything and
