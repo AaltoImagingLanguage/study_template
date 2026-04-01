@@ -5,3 +5,5 @@ __pycache__
 *.pyc
 .doit*
 system_check.txt
+*.swp
+tags

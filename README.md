@@ -21,7 +21,7 @@ This template contains a mock analysis pipeline with some mock data:
    * alternatively, run `python main.py` to use a simple main script to run all the analysis steps
   
 After the analysis has been completed:
- * the processed data should be in the `processed/` folder
+ * the processed data should be in the `data/processed/` folder
  * the HTML reports should be in the `reports/` folder
  * the generated figures should be in the `figures/` folder.
  
@@ -39,7 +39,6 @@ After the analysis has been completed:
 | dodo.py                 | A version of the main script that is meant to be consumed by the build system "pydoit". Use either this script as main script or use `main.py`.                                                |
 | figure_example1.py      | Script that produces the first figure in this analysis.                                                                                                                                              |
 | figure_grand_average.py | Script that produces the second figure in this analysis.                                                                                                                                             |
-| fnames.py               | Helper class to manage filenames. Used in `config.py` to define all filenames. Used by the analysis scripts for convenient access to the filenames.                                                  |
 | main.py                 | A plain python version of the main script. Use either this script or `dodo.py` to run the entire analysis.                                                                                         |
 | requirements.txt        | A list of python packages required to run the analysis. You can install these with `pip install -r requirements.txt`                                                                                 |
 
