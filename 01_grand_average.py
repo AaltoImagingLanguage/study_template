@@ -1,12 +1,11 @@
-"""
-Compute grand average across all subjects
-"""
+"""Compute grand average across all subjects."""
+
 import numpy as np
 
-# All parameters are defined in config.py
+# All parameters are defined in config.py.
 from config import fname, subjects
 
-# Load the data, compute grand average and save the result
+# Load the data, compute grand average and save the result.
 data = []
 for subject in subjects:
     data.append(np.loadtxt(fname.output(subject=subject)))
